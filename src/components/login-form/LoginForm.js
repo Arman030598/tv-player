@@ -1,7 +1,8 @@
 const LoginForm = ({onSubmit,handleChange}) =>{
     return(
-        <form action="" onSubmit={onSubmit}>
+        <form action="" onSubmit={onSubmit} className={"login__form"}>
             <input
+                className={"login__form--inp"}
                 type="text"
                 name={'username'}
                 onChange={handleChange}

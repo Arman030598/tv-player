@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useState} from "react"
 import {useRouter} from "../../hooks/router";
 import LoginForm from "../../components/login-form/LoginForm"
+import "./Login.scss"
 
 const Login = () => {
     const [name, setName] = useState("")
@@ -36,7 +37,7 @@ const Login = () => {
             .catch(err => console.log(err))
     }
     return (
-        <div>
+        <div className={"login"}>
             <LoginForm
                 onSubmit={onSubmit}
                 handleChange={handleChange}

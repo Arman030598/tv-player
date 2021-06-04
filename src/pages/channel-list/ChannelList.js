@@ -1,6 +1,7 @@
 import {useEffect,useState} from "react"
 import {useRouter} from "../../hooks/router";
 import axios from "axios";
+import Channel from "../../components/channel/Channel";
 
 const ChannelList = () =>{
     const router = useRouter()
@@ -28,10 +29,7 @@ const ChannelList = () =>{
         <div>
             {videoData.map((e,i)=>{
                 return(
-                    <div onClick={()=>goToVideoHandler(e)} key={i}>
-                        <img src={e.image} alt={e.image}/>
-                        <p>{e.name}</p>
-                    </div>
+                    <Channel goToVideoHandler={goToVideoHandler} e={e} key={i}/>
                 )
             })}
 
