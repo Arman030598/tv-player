@@ -31,8 +31,14 @@ const Login = () => {
             }
         )
             .then(res => {
-                localStorage.setItem("token", JSON.stringify(res.data.message))
-                router.push("/channel-list")
+                if(!res.data.error){
+                    localStorage.setItem("token", JSON.stringify(res.data.message))
+                    router.push("/channel-list")
+                }else{
+                    alert('incorrect UserName or Password')
+                }
+
+
             })
             .catch(err => console.log(err))
     }
