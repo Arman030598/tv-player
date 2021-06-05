@@ -26,7 +26,7 @@ const ChannelList = () =>{
         router.push("/player-component")
     }
     return(
-        <div>
+        <div className={'MainChannelList'}>
             {videoData.map((e,i)=>{
                 return(
                     <Channel goToVideoHandler={goToVideoHandler} e={e} key={i}/>

@@ -1,9 +1,21 @@
 .login{
+  padding: 50px;
+  box-shadow: 0 0 15px;
+  width: 40%;
+  margin: 50px auto;
+
   &__form{
     display: flex;
     flex-direction: column;
-    &--inp{
-      padding: 10px;
+    input{
+      border-radius: 5px;
+      &:focus{
+        background-color: green;
+      }
+    }
+    button{
+      margin-top: 20px;
+      padding: 10px 0;
     }
   }
 }

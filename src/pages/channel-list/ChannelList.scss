@@ -1,0 +1,25 @@
+.MainChannelList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .Card{
+    width: 18%;
+    box-shadow: 0 0 15px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    &:hover{
+      box-shadow: 0 0 20px green;
+      transition: .5s;
+      transform: scale(1.1);
+    }
+    img{
+      margin: 0 auto;
+      display: block;
+
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
